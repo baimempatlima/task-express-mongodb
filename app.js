@@ -7,12 +7,13 @@ const port = process.env.PORT || 3000;
 const productRouterV3 = require("./app/product_v3/routes");
 const productRouterV4 = require("./app/product_v4/routes");
 const cors = require("cors");
+require("dotenv");
 
-// const corsOption = {
-//   credentials: true,
-//   origin: process.env.URL || "*",
-// };
-app.use(cors());
+const corsOption = {
+  credentials: true,
+  origin: process.env.URL || "*",
+};
+app.use(cors(corsOption));
 app.use(logger("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());

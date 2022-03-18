@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+require("dotenv");
 const database = process.env.MONGO_URI || "mongodb://baim:baim45@localhost:27017/bayu-native?authSource=admin";
 
 mongoose.connect(database, {

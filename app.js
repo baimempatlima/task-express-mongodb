@@ -7,6 +7,7 @@ const port = process.env.PORT || 3000;
 const productRouterV3 = require("./app/product_v3/routes");
 const productRouterV4 = require("./app/product_v4/routes");
 const cors = require("cors");
+require("dotenv");
 
 const corsOption = {
   credentials: true,

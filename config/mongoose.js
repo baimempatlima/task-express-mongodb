@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-// require("dotenv");
+require("dotenv");
 
 const env = process.env.NODE_ENV || "development";
 

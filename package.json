@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "set NODE_ENV=development&& nodemon app.js",
+    "start-prod": "set NODE_ENV=production&& nodemon app.js"
   },
   "author": "",
   "license": "ISC",
@@ -22,5 +23,8 @@
     "pg": "^8.7.3",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.17.0"
+  },
+  "engines": {
+    "node": "v16.13.2"
   }
 }

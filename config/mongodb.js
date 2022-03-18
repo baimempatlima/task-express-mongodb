@@ -9,7 +9,7 @@ const env = process.env.NODE_ENV || "development";
 const url = () => {
   switch (env) {
     case "development":
-      return "mongodb://baim:baim45@localhost:27017?authSource=admin";
+      return "mongodb://baim:baim45@localhost:27017/bayu-native?authSource=admin";
     case "production":
       return process.env.MONGO_URI;
   }
@@ -29,5 +29,5 @@ const client = new MongoClient(url());
   }
 })();
 
-const db = client.db("bayu-native");
+const db = client.db();
 module.exports = db;

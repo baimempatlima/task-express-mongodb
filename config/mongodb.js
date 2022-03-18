@@ -1,6 +1,7 @@
 const { MongoClient } = require("mongodb");
-require("dotenv");
-const url = process.env.MONGO_URI || "mongodb://baim:baim45@localhost:27017?authSource=admin";
+const dotenv = require("dotenv");
+dotenv.config();
+const url = process.env.MONGO_URI || "mongodb://baim:baim45@localhost:27017?bayu-native?authSource=admin";
 const client = new MongoClient(url);
 
 (async () => {

@@ -12,10 +12,7 @@ switch (env) {
     db = mongoose.connection;
     break;
   case "production":
-    mongoose.connect(process.env.MONGO_URI, {
-    useUnifiedTopology: true,
-    useNewUrlParser: true,
- });
+    mongoose.connect(process.env.MONGO_URI);
     db = mongoose.connection;
     break;
 }
